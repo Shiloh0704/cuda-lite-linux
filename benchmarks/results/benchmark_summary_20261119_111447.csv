@@ -1,0 +1,4 @@
+Matrix_Size,CPU_Time_ms,GPU_Tiled_ms,H2D_ms,D2H_ms,Kernel_Speedup,E2E_Speedup
+512,28.18,0.32,&,1.28,Speedup:,7.14
+1024,258.85,2.52,&,4.66,Speedup:,24.27
+2048,3627.00,21.11,&,33.68,Speedup:,39.92

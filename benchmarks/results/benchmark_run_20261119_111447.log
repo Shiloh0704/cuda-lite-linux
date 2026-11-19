@@ -1,0 +1,165 @@
+=== CUDA-Lite Linux Benchmark Suite ===
+Timestamp: Thu Nov 19 11:14:47 UTC 2026
+Host Kernel: 6.18.58.1-microsoft-standard-WSL2
+
+--- Hardware Telemetry (Pre-run) ---
+timestamp, name, driver_version, temperature.gpu, utilization.gpu [%], utilization.memory [%], memory.total [MiB], memory.free [MiB], memory.used [MiB], power.draw [W]
+2026/11/19 11:14:51.098, NVIDIA GeForce RTX 4050 Laptop GPU, 592.82, 42, [Unknown Error], [Unknown Error], 6141 MiB, 5920 MiB, 0 MiB, [Unknown Error]
+
+--- Building CUDA Benchmark Binaries ---
+
+--- Running CUDA Device Query ---
+====================================================================
+        CUDA-Lite Linux: Hardware Device Discovery & Query          
+====================================================================
+Detected 1 CUDA-capable device(s)
+
+--------------------------------------------------------------------
+Device 0: "NVIDIA GeForce RTX 4050 Laptop GPU"
+--------------------------------------------------------------------
+  CUDA Driver / Runtime Version:      12.4 / 12.4
+  CUDA Capability Major/Minor version: 8.9
+  Total Global Memory:                 6.00 GB (6438780928 bytes)
+  Multiprocessors (SM Count):          20
+  GPU Clock Rate:                      2.13 GHz (2130 MHz)
+  Memory Clock Rate:                   8.00 GHz (8001 MHz)
+  Memory Bus Width:                    96-bit
+  Theoretical Peak Memory Bandwidth:   192.02 GB/s
+  L2 Cache Size:                       24576 KB
+  Total Constant Memory:               64 KB
+  Shared Memory per Block:             48 KB
+  Registers per Block:                 65536
+  Warp Size:                           32 threads
+  Max Threads per Multiprocessor:      1536
+  Max Threads per Block:               1024
+  Max Dimension Sizes of a Block:      (1024, 1024, 64)
+  Max Dimension Sizes of a Grid:       (2147483647, 65535, 65535)
+  Concurrent Copy and Execution:       Yes (Overlap engines: 1)
+  Unified Addressing (UVA):            Supported
+  ECC Memory Support:                  Disabled/Unsupported
+  PCIe Bus ID / Device ID / Domain:    01:00.0 (Domain 0)
+--------------------------------------------------------------------
+
+CUDA Device Query: SUCCESS
+
+--- Executing Matrix Multiplication Benchmark Runs ---
+
+>>> Testing N = 512...
+====================================================================
+     CUDA-Lite Linux: CPU vs GPU Matrix Multiplication Benchmark    
+====================================================================
+Target GPU:            NVIDIA GeForce RTX 4050 Laptop GPU (Compute 8.9, 20 SMs)
+Matrix Dimensions:     512 x 512 (Single Precision FP32)
+Memory per Matrix:     1.00 MB (Total for A, B, C: 3.00 MB)
+Operations per Run:    0.2684 GFLOP (2 * N^3)
+Benchmark Iterations:  5 (Warmup runs: 2)
+--------------------------------------------------------------------
+
+[1/3] Benchmarking Reference CPU (C/C++ loops)...
+      CPU Average Time:       28.18 ms  |  Performance:     9.53 GFLOPS
+
+[2/3] Benchmarking GPU Naive Global Memory Kernel...
+      GPU Naive Time:          0.44 ms  |  Performance:   604.62 GFLOPS
+      Correctness:       Verification PASSED (Max absolute difference: 1.144409e-05, tolerance: 1.000000e-03)
+
+[3/3] Benchmarking GPU Tiled Shared-Memory Kernel (Optimized)...
+      GPU Tiled Time:          0.32 ms  |  Performance:   826.04 GFLOPS
+      Correctness:       Verification PASSED (Max absolute difference: 1.144409e-05, tolerance: 1.000000e-03)
+
+====================================================================
+                 BENCHMARK PERFORMANCE SUMMARY                      
+====================================================================
+  CPU Execution Time:                   28.18 ms
+  GPU Compute Time (Tiled Kernel):       0.32 ms
+  Data Transfer Overhead:
+    - Host-to-Device (A & B):            2.34 ms (0.83 GB/s)
+    - Device-to-Host (C):                1.28 ms (0.76 GB/s)
+    - Total Transfer Time:               3.62 ms (91.8% of GPU workflow)
+  Total GPU End-to-End Time:             3.95 ms
+--------------------------------------------------------------------
+  Calculated Speedup Metrics:
+    - Raw Kernel Compute Speedup:       86.71x (CPU time / GPU kernel time)
+    - End-to-End System Speedup:         7.14x (CPU time / [Transfer + Kernel])
+====================================================================
+
+>>> Testing N = 1024...
+====================================================================
+     CUDA-Lite Linux: CPU vs GPU Matrix Multiplication Benchmark    
+====================================================================
+Target GPU:            NVIDIA GeForce RTX 4050 Laptop GPU (Compute 8.9, 20 SMs)
+Matrix Dimensions:     1024 x 1024 (Single Precision FP32)
+Memory per Matrix:     4.00 MB (Total for A, B, C: 12.00 MB)
+Operations per Run:    2.1475 GFLOP (2 * N^3)
+Benchmark Iterations:  5 (Warmup runs: 2)
+--------------------------------------------------------------------
+
+[1/3] Benchmarking Reference CPU (C/C++ loops)...
+      CPU Average Time:      258.85 ms  |  Performance:     8.30 GFLOPS
+
+[2/3] Benchmarking GPU Naive Global Memory Kernel...
+      GPU Naive Time:          3.38 ms  |  Performance:   635.97 GFLOPS
+      Correctness:       Verification PASSED (Max absolute difference: 1.907349e-05, tolerance: 1.000000e-03)
+
+[3/3] Benchmarking GPU Tiled Shared-Memory Kernel (Optimized)...
+      GPU Tiled Time:          2.52 ms  |  Performance:   851.81 GFLOPS
+      Correctness:       Verification PASSED (Max absolute difference: 1.907349e-05, tolerance: 1.000000e-03)
+
+====================================================================
+                 BENCHMARK PERFORMANCE SUMMARY                      
+====================================================================
+  CPU Execution Time:                  258.85 ms
+  GPU Compute Time (Tiled Kernel):       2.52 ms
+  Data Transfer Overhead:
+    - Host-to-Device (A & B):            3.48 ms (2.24 GB/s)
+    - Device-to-Host (C):                4.66 ms (0.84 GB/s)
+    - Total Transfer Time:               8.14 ms (76.4% of GPU workflow)
+  Total GPU End-to-End Time:            10.67 ms
+--------------------------------------------------------------------
+  Calculated Speedup Metrics:
+    - Raw Kernel Compute Speedup:      102.67x (CPU time / GPU kernel time)
+    - End-to-End System Speedup:        24.27x (CPU time / [Transfer + Kernel])
+====================================================================
+
+>>> Testing N = 2048...
+====================================================================
+     CUDA-Lite Linux: CPU vs GPU Matrix Multiplication Benchmark    
+====================================================================
+Target GPU:            NVIDIA GeForce RTX 4050 Laptop GPU (Compute 8.9, 20 SMs)
+Matrix Dimensions:     2048 x 2048 (Single Precision FP32)
+Memory per Matrix:     16.00 MB (Total for A, B, C: 48.00 MB)
+Operations per Run:    17.1799 GFLOP (2 * N^3)
+Benchmark Iterations:  5 (Warmup runs: 2)
+--------------------------------------------------------------------
+
+[1/3] Benchmarking Reference CPU (C/C++ loops)...
+      CPU Average Time:     3627.00 ms  |  Performance:     4.74 GFLOPS
+
+[2/3] Benchmarking GPU Naive Global Memory Kernel...
+      GPU Naive Time:         28.85 ms  |  Performance:   595.46 GFLOPS
+      Correctness:       Verification PASSED (Max absolute difference: 3.433228e-05, tolerance: 1.000000e-03)
+
+[3/3] Benchmarking GPU Tiled Shared-Memory Kernel (Optimized)...
+      GPU Tiled Time:         21.11 ms  |  Performance:   813.74 GFLOPS
+      Correctness:       Verification PASSED (Max absolute difference: 3.433228e-05, tolerance: 1.000000e-03)
+
+====================================================================
+                 BENCHMARK PERFORMANCE SUMMARY                      
+====================================================================
+  CPU Execution Time:                 3627.00 ms
+  GPU Compute Time (Tiled Kernel):      21.11 ms
+  Data Transfer Overhead:
+    - Host-to-Device (A & B):           36.05 ms (0.87 GB/s)
+    - Device-to-Host (C):               33.68 ms (0.46 GB/s)
+    - Total Transfer Time:              69.74 ms (76.8% of GPU workflow)
+  Total GPU End-to-End Time:            90.85 ms
+--------------------------------------------------------------------
+  Calculated Speedup Metrics:
+    - Raw Kernel Compute Speedup:      171.80x (CPU time / GPU kernel time)
+    - End-to-End System Speedup:        39.92x (CPU time / [Transfer + Kernel])
+====================================================================
+
+--- Hardware Telemetry (Post-run) ---
+timestamp, name, driver_version, temperature.gpu, utilization.gpu [%], utilization.memory [%], memory.total [MiB], memory.free [MiB], memory.used [MiB], power.draw [W]
+2026/11/19 11:16:41.510, NVIDIA GeForce RTX 4050 Laptop GPU, 592.82, 43, 0 %, 0 %, 6141 MiB, 5920 MiB, 0 MiB, [Unknown Error]
+
+Benchmark Suite Complete! Results recorded to:
