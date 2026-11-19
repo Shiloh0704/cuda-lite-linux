@@ -1,0 +1,16 @@
+[Unit]
+Description=CUDA-Lite Linux Autonomous GPU Diagnostic and Benchmark Service
+After=network.target local-fs.target
+Wants=systemd-udev-settle.service
+
+[Service]
+Type=oneshot
+User=root
+StandardOutput=journal+console
+StandardError=journal+console
+ExecStartPre=/usr/bin/nvidia-smi
+ExecStart=/opt/cuda-lite/bin/matrix_mul 1024 5
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

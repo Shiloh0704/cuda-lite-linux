@@ -1,0 +1,79 @@
+# CUDA-Lite Linux: Kernel Configuration Customisation & Tailoring
+# Baseline: Generic Debian/Ubuntu x86_64 Stock Kernel (CONFIG_GENERIC_CPU, monolithic drivers)
+# Custom Target: Minimal Compute Node Kernel for x86_64 + NVIDIA PCIe GPU Compute
+# Satisfies Assignment Requirement C: Kernel/driver customisation and diff analysis.
+
+# =============================================================================
+# 1. Hardware Architecture & Processor Optimization
+# =============================================================================
+# Stock: Generic ancient 64-bit baseline (x86-64-v1)
+# Custom: Target Modern Core / AVX2 / x86-64-v3 architecture
+-CONFIG_GENERIC_CPU=y
++CONFIG_MCORE2=y
++CONFIG_X86_64_VERSION_3=y
+
+# Disable legacy/unneeded CPU architectures and emulation
+-CONFIG_MATH_EMULATION=y
+-CONFIG_IA32_EMULATION=y
+-CONFIG_X86_X32=y
+
+# =============================================================================
+# 2. Kernel Preemption, Tick Rate & Low-Latency Compute
+# =============================================================================
+# Stock: Generic Desktop/Server PREEMPT_DYNAMIC or PREEMPT_VOLUNTARY
+# Custom: PREEMPT (Low-Latency Desktop/Compute) with Full Dynamic Tick (NO_HZ_FULL)
+# Eliminates kernel timer interrupts from disturbing GPU execution queues and DMA rings.
+-CONFIG_PREEMPT_NONE=y
++CONFIG_PREEMPT=y
++CONFIG_HZ_1000=y
+-CONFIG_HZ_250=y
++CONFIG_NO_HZ_FULL=y
+
+# =============================================================================
+# 3. Memory Subsystem & DMA Engine (Essential for CUDA Performance)
+# =============================================================================
+# Mandatory for High-Throughput Direct GPU Memory Access (GPUDirect / UVA)
+CONFIG_ZONE_DEVICE=y
+CONFIG_DEVICE_PRIVATE=y
+CONFIG_HMM_MIRROR=y
+CONFIG_DMABUF_MOVE_NOTIFY=y
+CONFIG_SYNC_FILE=y
+CONFIG_PCI_P2PDMA=y
+CONFIG_IOMMU_SUPPORT=y
+CONFIG_INTEL_IOMMU=y
+CONFIG_INTEL_IOMMU_DEFAULT_ON=y
+
+# =============================================================================
+# 4. Mandatory Filesystem & Storage Drivers
+# =============================================================================
+# For live image read-only root and OverlayFS
+CONFIG_OVERLAY_FS=y
+CONFIG_OVERLAY_FS_REDIRECT_DIR=y
+CONFIG_SQUASHFS=y
+CONFIG_SQUASHFS_XZ=y
+CONFIG_SQUASHFS_FILE_DIRECT=y
+CONFIG_TMPFS=y
+CONFIG_TMPFS_POSIX_ACL=y
+CONFIG_EXT4_FS=y
+
+# =============================================================================
+# 5. Major Pruning & Exclusions (Stock bloat removed)
+# =============================================================================
+# Sound Card Subsystem (completely stripped)
+-CONFIG_SOUND=y
+-CONFIG_SND=y
+-CONFIG_SND_HDA_INTEL=y
+
+# Wireless, Bluetooth & Ham Radio (stripped)
+-CONFIG_BT=y
+-CONFIG_WLAN=y
+-CONFIG_HAMRADIO=y
+
+# Legacy media, TV tuners, DVB (stripped)
+-CONFIG_MEDIA_SUPPORT=y
+-CONFIG_DVB_CORE=y
+
+# Legacy storage, floppy, parallel ports, IDE (stripped)
+-CONFIG_BLK_DEV_FD=y
+-CONFIG_PARPORT=y
+-CONFIG_IDE=y

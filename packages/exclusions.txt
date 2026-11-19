@@ -1,0 +1,27 @@
+# CUDA-Lite Linux: Stock Distribution Exclusions & Justifications
+# Rationale: Satisfies Assignment Requirement D (minimal userland & exclusions).
+
+# 1. Graphical User Interface (GUI) & Display Servers
+# Excluded: xserver-xorg, wayland, gdm3, lightdm, sddm, mutter, kwin
+# Justification: Headless compute nodes do not require a 2D/3D windowing environment.
+# Eliminating the display server saves ~1.2 GB of disk footprint and 400+ MB of idle RAM.
+# GPU compute operates directly via headless driver contexts (CUDA Driver API / EGL / DRM).
+
+# 2. Desktop Environments & Applications
+# Excluded: GNOME, KDE Plasma, XFCE, LibreOffice, Firefox, Thunderbird, Evince, GIMP
+# Justification: Completely irrelevant for GPU matrix multiplication, HPC, and machine learning pipelines.
+# Reduces attack surface and vulnerability patching overhead.
+
+# 3. Audio & Multimedia Subsystems
+# Excluded: pulseaudio, pipewire, alsa-utils, gstreamer1.0-*, ffmpeg, vlc
+# Justification: Audio capture and playback consume CPU cycles, interrupt vectors, and daemon RAM
+# with zero utility for a dedicated GPU compute node.
+
+# 4. Bluetooth & Peripherals Stack
+# Excluded: bluez, blueman, cups, sane-utils, modemmanager, colord
+# Justification: Eliminates background polling, scanning, and unnecessary radio device management.
+
+# 5. Background Indexing & Telemetry
+# Excluded: tracker-miner-fs, zeitgeist, apport, whoopsie, snapd
+# Justification: Eliminates background I/O contention, memory leaks, and telemetry traffic that degrades
+# low-latency compute predictability.

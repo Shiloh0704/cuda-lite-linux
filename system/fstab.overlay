@@ -1,0 +1,11 @@
+# CUDA-Lite Linux Filesystem Configuration (Read-Only Root with OverlayFS)
+# The base SquashFS root filesystem (/live/rofs) is mounted read-only.
+# A tmpfs RAM-backed layer is mounted at /live/cow and merged via OverlayFS to form the writable /.
+
+# <file system>    <mount point>    <type>      <options>                   <dump> <pass>
+overlay            /                overlay     defaults,noatime,nodiratime 0      0
+tmpfs              /tmp             tmpfs       nosuid,nodev,noatime,size=2G 0     0
+tmpfs              /var/log         tmpfs       nosuid,nodev,noatime,size=256M 0   0
+proc               /proc            proc        defaults,hidepid=2          0      0
+sysfs              /sys             sysfs       defaults                    0      0
+devpts             /dev/pts         devpts      gid=5,mode=620              0      0

@@ -1,0 +1,73 @@
+# CUDA-Lite Linux: Minimal Package Manifest
+# Target Distribution: Debian 13 (Trixie) / Ubuntu minimal base (amd64)
+# Track C: CUDA/GPU Compute Application-Specific Linux
+# Total Packages: ~142 packages (versus 1,100+ in stock Debian/Ubuntu desktop)
+
+# --- Category 1: Minimal Base System & Init ---
+base-files
+base-passwd
+bash
+coreutils
+dash
+diffutils
+dpkg
+findutils
+grep
+gzip
+hostname
+init-system-helpers
+libc-bin
+libc6
+libgcc-s1
+libstdc++6
+login
+mount
+sed
+systemd
+systemd-sysv
+tar
+util-linux
+
+# --- Category 2: Hardware, Storage & Filesystem Drivers ---
+kmod
+udev
+libudev1
+pciutils
+e2fsprogs
+dosfstools
+squashfs-tools
+overlayfs-tools
+
+# --- Category 3: Bootloader & Kernel Image ---
+linux-image-amd64
+live-boot
+live-boot-initramfs-tools
+initramfs-tools
+busybox
+grub-efi-amd64-bin
+grub-pc-bin
+
+# --- Category 4: Minimal Networking & Remote Operations ---
+iproute2
+iputils-ping
+isc-dhcp-client
+openssh-server
+ca-certificates
+netbase
+
+# --- Category 5: NVIDIA Compute & CUDA Runtime ---
+nvidia-driver-libs-nvcuda
+nvidia-cuda-toolkit
+nvidia-cuda-dev
+nvidia-smi
+nvidia-modprobe
+libcuda1
+libcudart12
+libcublas12
+libcurand12
+
+# --- Category 6: Performance Monitoring & Diagnostic ---
+htop
+procps
+less
+nano
