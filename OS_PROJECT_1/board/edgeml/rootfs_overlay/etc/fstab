@@ -1,0 +1,10 @@
+# /etc/fstab: Static file system information for EdgeML Linux OS
+# <file system>   <mount point>   <type>      <options>                       <dump>  <pass>
+/dev/root         /               squashfs    ro,defaults                     0       0
+proc              /proc           proc        defaults                        0       0
+sysfs             /sys            sysfs       defaults                        0       0
+devtmpfs          /dev            devtmpfs    defaults                        0       0
+devpts            /dev/pts        devpts      defaults,gid=5,mode=620         0       0
+tmpfs             /dev/shm        tmpfs       defaults,size=64M               0       0
+tmpfs             /tmp            tmpfs       defaults,nosuid,nodev,size=64M  0       0
+tmpfs             /run            tmpfs       defaults,nosuid,nodev,size=16M  0       0

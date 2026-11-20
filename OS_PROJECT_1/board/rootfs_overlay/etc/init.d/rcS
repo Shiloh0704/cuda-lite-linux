@@ -1,0 +1,45 @@
+#!/bin/sh
+# EdgeML Linux OS System Initialization & OverlayFS Mount
+
+echo "====================================================="
+echo "       Initializing EdgeML Linux OS (ARM64)          "
+echo "====================================================="
+
+# Mount essential virtual filesystems
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+mkdir -p /dev/pts /dev/shm
+mount -t devpts devpts /dev/pts
+mount -t tmpfs tmpfs /dev/shm
+
+# Setup volatile in-memory OverlayFS
+echo "[INIT] Mounting volatile tmpfs on /overlay..."
+mount -t tmpfs -o mode=0755,size=64M tmpfs /overlay
+mkdir -p /overlay/upper /overlay/work /overlay/var_upper /overlay/var_work /tmp/results
+
+# Mount volatile overlay for /var and /tmp to ensure pristine factory resets
+mount -t overlay overlay -o lowerdir=/var,upperdir=/overlay/var_upper,workdir=/overlay/var_work /var
+mount -t tmpfs -o mode=1777,size=32M tmpfs /tmp
+
+# Configure loopback networking
+ifconfig lo 127.0.0.1 up
+
+# Execute SysV init scripts sequentially
+for i in /etc/init.d/S??*; do
+    [ ! -f "$i" ] && continue
+    case "$i" in
+        *.sh)
+            (
+                trap - INT QUIT TSTP
+                set start
+                . "$i"
+            )
+            ;;
+        *)
+            "$i" start
+            ;;
+    esac
+done
+
+echo "[INIT] Initialization complete. Dropping to console."
