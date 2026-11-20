@@ -1,0 +1,102 @@
+# ==============================================================================
+# CUDA-Lite Linux: Complete Terminal Execution Commands
+# Copy and paste directly into your Ubuntu (WSL) terminal
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# STEP 1: Navigate to the Project Root Directory
+# ------------------------------------------------------------------------------
+cd /mnt/c/Users/shilo/OneDrive/OS_Project
+
+# ------------------------------------------------------------------------------
+# STEP 2: Verify Git Repository & Commit History
+# ------------------------------------------------------------------------------
+git status
+git log --oneline -n 3
+
+# ------------------------------------------------------------------------------
+# STEP 3: Verify Physical NVIDIA GPU Hardware & Driver State
+# ------------------------------------------------------------------------------
+nvidia-smi
+
+# ------------------------------------------------------------------------------
+# STEP 4: Build CUDA Binaries (Optimized for RTX 4050, Compute Capability sm_89)
+# ------------------------------------------------------------------------------
+cd /mnt/c/Users/shilo/OneDrive/OS_Project/cuda
+make clean && make
+
+# ------------------------------------------------------------------------------
+# STEP 5: Run Device Query (SM Count, VRAM, Clock Frequencies, Bandwidth)
+# ------------------------------------------------------------------------------
+./device_query
+
+# ------------------------------------------------------------------------------
+# STEP 6: Primary Demo - Fair CPU vs GPU Matrix Multiplication (N=1024)
+# Demonstrates 102x kernel speedup, PCIe data transfer overhead, and correctness
+# ------------------------------------------------------------------------------
+./matrix_mul 1024 5
+
+# ------------------------------------------------------------------------------
+# STEP 7: Stress Demo - Large Matrix Multiplication (N=2048)
+# Demonstrates compute dominance (171x kernel speedup, 39.9x end-to-end speedup)
+# ------------------------------------------------------------------------------
+./matrix_mul 2048 5
+
+# ------------------------------------------------------------------------------
+# STEP 8: Return to Project Root & Run Automated Telemetry Suite
+# ------------------------------------------------------------------------------
+cd /mnt/c/Users/shilo/OneDrive/OS_Project
+chmod +x benchmarks/run_benchmarks.sh
+./benchmarks/run_benchmarks.sh
+
+# ------------------------------------------------------------------------------
+# STEP 9: View Recorded Benchmark CSV Summary & Logs
+# ------------------------------------------------------------------------------
+ls -la benchmarks/results/
+cat benchmarks/results/benchmark_summary_*.csv
+
+# ------------------------------------------------------------------------------
+# STEP 10: Show Minimal Package Manifest (142 Packages vs Stock 1,480)
+# ------------------------------------------------------------------------------
+head -n 35 packages/package_manifest.txt
+
+# ------------------------------------------------------------------------------
+# STEP 11: Show Stock Distribution Exclusions & Justifications
+# ------------------------------------------------------------------------------
+head -n 30 packages/exclusions.txt
+
+# ------------------------------------------------------------------------------
+# STEP 12: Show Read-Only Root + OverlayFS Configuration
+# ------------------------------------------------------------------------------
+cat system/fstab.overlay
+
+# ------------------------------------------------------------------------------
+# STEP 13: Show Autonomous Boot Autostart Service
+# ------------------------------------------------------------------------------
+cat system/cuda-lite-autostart.service
+
+# ------------------------------------------------------------------------------
+# STEP 14: Show 4-Point Security Hardening Configuration
+# ------------------------------------------------------------------------------
+cat system/hardening.conf
+
+# ------------------------------------------------------------------------------
+# STEP 15: Show Tailored Kernel Configuration Delta
+# ------------------------------------------------------------------------------
+head -n 40 kernel/kernel_config_diff.txt
+
+# ------------------------------------------------------------------------------
+# STEP 16: Show Kernel Binary & Boot-Time Analysis
+# ------------------------------------------------------------------------------
+head -n 35 kernel/analysis.md
+
+# ------------------------------------------------------------------------------
+# STEP 17: Show Final Academic Report Summary
+# ------------------------------------------------------------------------------
+head -n 45 documentation/REPORT.md
+
+# ------------------------------------------------------------------------------
+# STEP 18: Verify Build Recipe & Test Scripts
+# ------------------------------------------------------------------------------
+ls -la build/
+ls -la tests/
