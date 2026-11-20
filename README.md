@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# cuda-lite-linux
-=======
 # CUDA-Lite Linux
 
 **Application-Specific Linux Distribution for NVIDIA CUDA/GPU Computing**  
@@ -105,4 +102,3 @@ sudo ./build/build_iso.sh
 * **Base System & Kernel Scripts**: GPLv2 / GPLv3.
 * **CUDA-Lite Benchmark Code**: MIT License.
 * **NVIDIA Drivers & CUDA Runtime**: NVIDIA Software License Agreement & CUDA Toolkit EULA.
->>>>>>> 5d51aef (Initial commit: Complete CUDA-Lite Linux architecture, build recipes, kernel configs, benchmarks, and academic report)
