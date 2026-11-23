@@ -1,0 +1,26 @@
+Starting QEMU systemd boot verification...
+c[?7l[2J[0mSeaBIOS (version 1.17.0-debian-1.17.0-1ubuntu1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+7EFC8AD0+7EF08AD0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from ROM...
+c[?7l[2J/init: line 29: can't create /root/etc/network/interfaces: nonexistent directory
+[!p]104[?7h[   10.254533] systemd-fstab-generator[330]: Failed to create unit file '/run/systemd/generator/tmp.mount', as it already exists. Duplicate entry in '/etc/fstab'?
+[   10.324666] (sd-exec-[328]: /usr/lib/systemd/system-generators/systemd-fstab-generator failed with exit status 1.
+[   20.697504] bash[517]: ================================================
+[   20.704805] bash[517]:        CUDA-Lite Linux - Startup Diagnostic
+[   20.757511] bash[517]: ================================================
+[   20.811843] bash[517]: Notice: No NVIDIA PCI device detected on the bus (virtual/QEMU environment).
+[   20.819868] bash[517]: CUDA diagnostic benchmark skipped.
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mnvidia-cdi-refresh…[0mresh NVIDIA CDI specification file.
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mnvidia-cdi-refresh…[0mresh NVIDIA CDI specification file.
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mnvidia-cdi-refresh…[0mresh NVIDIA CDI specification file.
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mnvidia-cdi-refresh…[0mresh NVIDIA CDI specification file.
+[!p]104[?7h[6n[32766;32766H[6n[!p]104[?7h[6n[32766;32766H[6n
+Debian GNU/Linux 13 cuda-lite ttyS0
+
+cuda-lite login: 
+[SUCCESS] Candidate ISO reached systemd login prompt in 29.10 seconds!

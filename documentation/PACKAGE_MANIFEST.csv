@@ -1,0 +1,268 @@
+Package,Version,Section,InstalledSizeKB,License,Classification,Purpose
+apt,3.0.3,admin,4480,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: commandline package manager
+base-files,13.8+deb13u7,admin,500,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Debian base system miscellaneous files
+base-passwd,3.6.7,admin,272,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Debian base system master password and group files
+bash,5.2.37-2+b10,shells,7196,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU Bourne Again SHell
+binutils,2.44-3,devel,1073,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: GNU assembler, linker and binary utilities"
+binutils-common,2.44-3,devel,16098,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: Common files for the GNU assembler, linker and binary utilit"
+binutils-x86-64-linux-gnu,2.44-3,devel,5990,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: GNU binary utilities, for x86-64-linux-gnu target"
+bsdutils,1:2.41.5-0+deb13u1,utils,401,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: basic utilities from 4.4BSD-Lite
+build-essential,12.12,devel,17,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Informational list of build-essential packages
+busybox,1:1.37.0-6+b9,utils,875,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Tiny utilities for small and embedded systems
+bzip2,1.0.8-6,utils,113,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: high-quality block-sorting file compressor - utilities
+ca-certificates,20250419,misc,390,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Common CA certificates
+coreutils,9.7-3,utils,18457,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU core utilities
+cpio,2.15+dfsg-2,utils,1197,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU cpio -- a program to manage archives of files
+cpp,4:14.2.0-1,interpreters,18,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C preprocessor (cpp)
+cpp-13,13.3.0-16,interpreters,11,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C preprocessor
+cpp-13-x86-64-linux-gnu,13.3.0-16,interpreters,30603,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C preprocessor for x86_64-linux-gnu
+cpp-14,14.2.0-19,interpreters,11,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C preprocessor
+cpp-14-x86-64-linux-gnu,14.2.0-19,interpreters,34503,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C preprocessor for x86_64-linux-gnu
+cpp-x86-64-linux-gnu,4:14.2.0-1,interpreters,17,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C preprocessor (cpp) for the amd64 architecture
+dash,0.5.12-12,shells,207,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: POSIX-compliant shell
+dbus,1.16.2-2,admin,154,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: simple interprocess messaging system (system message bus)"
+dbus-bin,1.16.2-2,admin,190,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: simple interprocess messaging system (command line utilities"
+dbus-daemon,1.16.2-2,admin,352,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: simple interprocess messaging system (reference message bus)"
+dbus-session-bus-common,1.16.2-2,admin,80,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: simple interprocess messaging system (session bus configurat"
+dbus-system-bus-common,1.16.2-2,admin,91,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: simple interprocess messaging system (system bus configurati"
+debconf,1.5.91,admin,497,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Debian configuration management system
+debian-archive-keyring,2025.1,misc,302,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: OpenPGP archive certificates of the Debian archive
+debianutils,5.23.2,utils,225,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Miscellaneous utilities specific to Debian
+diffutils,1:3.10-4,utils,1768,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: File comparison utilities
+dkms,3.2.2-1~deb13u1,kernel,235,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Dynamic Kernel Module System (DKMS)
+dpkg,1.22.22,admin,6587,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Debian package management system
+dpkg-dev,1.22.22,utils,1725,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Debian package development tools
+dracut-install,106-6,utils,100,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: dracut is an event driven initramfs infrastructure (dracut-i
+findutils,4.10.0-3,utils,2160,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: utilities for finding files--find, xargs"
+firmware-nvidia-gsp,550.163.01-2,non-free-firmware/kernel,60698,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA GSP firmware
+g++,4:14.2.0-1,devel,13,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C++ compiler
+g++-13,13.3.0-16,devel,32,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C++ compiler
+g++-13-x86-64-linux-gnu,13.3.0-16,devel,32955,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C++ compiler for x86_64-linux-gnu architecture
+g++-14,14.2.0-19,devel,35,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C++ compiler
+g++-14-x86-64-linux-gnu,14.2.0-19,devel,36931,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C++ compiler for x86_64-linux-gnu architecture
+g++-x86-64-linux-gnu,4:14.2.0-1,devel,11,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C++ compiler for the amd64 architecture
+gcc,4:14.2.0-1,devel,36,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C compiler
+gcc-13,13.3.0-16,devel,565,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C compiler
+gcc-13-base,13.3.0-16,libs,111,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: GCC, the GNU Compiler Collection (base package)"
+gcc-13-x86-64-linux-gnu,13.3.0-16,devel,60523,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C compiler for the x86_64-linux-gnu architecture
+gcc-14,14.2.0-19,devel,622,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C compiler
+gcc-14-base,14.2.0-19,libs,112,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: GCC, the GNU Compiler Collection (base package)"
+gcc-14-x86-64-linux-gnu,14.2.0-19,devel,68460,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C compiler for the x86_64-linux-gnu architecture
+gcc-x86-64-linux-gnu,4:14.2.0-1,devel,23,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C compiler for the amd64 architecture
+glx-alternative-mesa,1.2.2,contrib/libs,32,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: allows the selection of MESA as GLX provider
+glx-alternative-nvidia,1.2.2,contrib/libs,43,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: allows the selection of NVIDIA as GLX provider
+glx-diversions,1.2.2,contrib/libs,35,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: prepare for using accelerated GLX implementations from GPU v
+grep,3.11-4,utils,1266,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: GNU grep, egrep and fgrep"
+gzip,1.13-1+deb13u1,utils,256,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU compression utilities
+hostname,3.25,admin,50,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: utility to set/show the host name or domain name
+init-system-helpers,1.69~deb13u1,admin,133,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: helper tools for all init systems"
+initramfs-tools,0.148.4,utils,52,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: generic modular initramfs generator (automation)"
+initramfs-tools-bin,0.148.4,utils,44,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: generic modular initramfs generator (binary tools)"
+initramfs-tools-core,0.148.4,utils,166,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: generic modular initramfs generator (core tools)"
+iproute2,6.15.0-1,net,3774,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: networking and traffic control tools
+isc-dhcp-client,4.4.3-P1-8,net,2884,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: DHCP client for automatically obtaining an IP address (depre
+klibc-utils,2.0.14-1,libs,479,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: small utilities built with klibc for early boot
+kmod,34.2-2,admin,255,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: tools for managing Linux kernel modules
+less,668-1,text,376,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: pager program similar to more
+libaccinj64-12.4,12.4.127~12.4.1-2,non-free/libs,2444,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA ACCINJ Library (64-bit)
+libacl1,2.3.2-2+b1,libs,74,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: access control list - shared library
+libapparmor1,4.1.0-1,libs,115,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: changehat AppArmor library
+libapt-pkg7.0,3.0.3,libs,3855,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: package management runtime library
+libasan8,14.2.0-19,libs,10695,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: AddressSanitizer -- a fast memory error detector
+libatomic1,14.2.0-19,libs,45,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: support library providing __atomic built-in functions
+libattr1,1:2.5.2-3,libs,60,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: extended attribute handling - shared library
+libaudit-common,1:4.0.2-2+deb13u1,libs,25,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Dynamic library for security auditing - common files
+libaudit1,1:4.0.2-2+deb13u1,libs,198,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Dynamic library for security auditing
+libbinutils,2.44-3,devel,2390,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU binary utilities (private shared library)
+libblkid1,2.41.5-0+deb13u1,libs,453,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: block device ID library
+libbpf1,1:1.5.0-3,libs,452,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: eBPF helper library (shared library)
+libbsd0,0.12.2-2,libs,214,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: utility functions from BSD systems - shared library
+libbz2-1.0,1.0.8-6,libs,96,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: high-quality block-sorting file compressor library - runtime
+libc-bin,2.41-12+deb13u4,libs,2122,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C Library: Binaries
+libc-dev-bin,2.41-12+deb13u4,libdevel,126,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C Library: Development binaries
+libc6,2.41-12+deb13u4,libs,13226,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C Library: Shared libraries
+libc6-dev,2.41-12+deb13u4,libdevel,12542,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU C Library: Development Libraries and Header Files
+libcap-ng0,0.8.5-4+b1,libs,66,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: alternate POSIX capabilities library
+libcap2,1:2.75-10+deb13u1+b3,libs,92,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: POSIX 1003.1e capabilities (library)
+libcap2-bin,1:2.75-10+deb13u1+b3,utils,132,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: POSIX 1003.1e capabilities (utilities)
+libcc1-0,14.2.0-19,libs,140,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GCC cc1 plugin for GDB
+libcom-err2,1.47.2-3+b12,libs,64,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: common error description library
+libcrypt-dev,1:4.4.38-1,libdevel,345,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: libcrypt development files
+libcrypt1,1:4.4.38-1,libs,234,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: libcrypt shared library
+libctf-nobfd0,2.44-3,devel,293,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: Compact C Type Format library (runtime, no BFD dependency)"
+libctf0,2.44-3,devel,232,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: Compact C Type Format library (runtime, BFD dependency)"
+libcu++-dev,2.3.2-2,libdevel,6967,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA C++ Standard Library
+libcub-dev,2.3.2-2,libdevel,3647,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: reusable software components for the CUDA programming model
+libcublas12,12.4.5.8~12.4.1-2,non-free/libs,107153,NVIDIA EULA,Open Source,GPU Computing / Driver Stack: NVIDIA cuBLAS Library
+libcublaslt12,12.4.5.8~12.4.1-2,non-free/libs,431688,NVIDIA EULA,Open Source,GPU Computing / Driver Stack: NVIDIA cuBLASLt Library
+libcuda1,550.163.01-2,non-free/libs,28256,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA CUDA Driver Library
+libcudart12,12.4.127~12.4.1-2,non-free/libs,802,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA CUDA Runtime Library
+libcufft11,11.2.1.3~12.4.1-2,non-free/libs,286119,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA cuFFT Library
+libcufftw11,11.2.1.3~12.4.1-2,non-free/libs,1047,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA cuFFTW Library
+libcuinj64-12.4,12.4.127~12.4.1-2,non-free/libs,2855,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA CUINJ Library (64-bit)
+libcupti-dev,12.4.127~12.4.1-2,non-free/libdevel,55028,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA CUDA Profiler Tools Interface development files
+libcupti12,12.4.127~12.4.1-2,non-free/libs,42987,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA CUDA Profiler Tools Interface runtime library
+libcurand10,11.1.1+~10.3.5.147~12.4.1-2,non-free/libs,94357,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA cuRAND Library
+libcusolver11,11.6.1.9~12.4.1-2,non-free/libs,117443,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA cuSOLVER Library
+libcusolvermg11,11.6.1.9~12.4.1-2,non-free/libs,80426,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA cuSOLVERmg Library
+libcusparse12,12.3.1.170~12.4.1-2,non-free/libs,274814,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA cuSPARSE Library
+libdb5.3t64,5.3.28+dfsg2-9,libs,1854,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Berkeley v5.3 Database Libraries [runtime]
+libdbus-1-3,1.16.2-2,libs,445,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: simple interprocess messaging system (library)"
+libdebconfclient0,0.280,libs,38,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Debian Configuration Management System (C-implementation lib
+libdpkg-perl,1.22.22,perl,2091,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Dpkg perl modules
+libdw1t64,0.192-4,libs,789,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: library that provides access to the DWARF debug information
+libelf1t64,0.192-4,libs,1228,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: library to read and write ELF files
+libexpat1,2.9.0-1~deb13u1,libs,427,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: XML parsing C library - runtime library
+libgcc-13-dev,13.3.0-16,libdevel,15899,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GCC support library (development files)
+libgcc-14-dev,14.2.0-19,libdevel,17357,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GCC support library (development files)
+libgcc-s1,14.2.0-19,libs,197,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GCC support library
+libgdbm-compat4t64,1.24-2,libs,75,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU dbm database routines (legacy support runtime version) 
+libgdbm6t64,1.24-2,libs,138,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU dbm database routines (runtime version) 
+libgmp10,2:6.3.0+dfsg-3,libs,882,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Multiprecision arithmetic library
+libgomp1,14.2.0-19,libs,368,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GCC OpenMP (GOMP) support library
+libgprofng0,2.44-3,devel,4034,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU Next Generation profiler (runtime library)
+libgssapi-krb5-2,1.21.3-5+deb13u1,libs,434,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
+libhogweed6t64,3.10.1-1,libs,483,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: low level cryptographic library (public-key cryptos)
+libhwasan0,14.2.0-19,libs,4850,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: AddressSanitizer -- a fast memory error detector
+libisl23,0.27-1,libs,2253,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: manipulating sets and relations of integer points bounded by
+libitm1,14.2.0-19,libs,115,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU Transactional Memory Library
+libjansson4,2.14-2+b3,libs,100,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: C library for encoding, decoding and manipulating JSON data"
+libk5crypto3,1.21.3-5+deb13u1,libs,266,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: MIT Kerberos runtime libraries - Crypto Library
+libkeyutils1,1.6.3-6,libs,41,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Linux Key Management Utilities (library)
+libklibc,2.0.14-1,libs,98,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: minimal libc subset for use with initramfs
+libkmod2,34.2-2,libs,144,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: libkmod shared library
+libkrb5-3,1.21.3-5+deb13u1,libs,1074,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: MIT Kerberos runtime libraries
+libkrb5support0,1.21.3-5+deb13u1,libs,137,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: MIT Kerberos runtime libraries - Support library
+liblastlog2-2,2.41.5-0+deb13u1,libs,75,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: lastlog2 database shared library
+liblsan0,14.2.0-19,libs,3782,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: LeakSanitizer -- a memory leak detector (runtime)
+liblz4-1,1.10.0-4,libs,173,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Fast LZ compression algorithm library - runtime
+liblzma5,5.8.1-1+deb13u2,libs,435,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: XZ-format compression library
+libmd0,1.1.0-2+b1,libs,94,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: message digest functions from BSD systems - shared library
+libmnl0,1.0.5-3,libs,45,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: minimalistic Netlink communication library
+libmount1,2.41.5-0+deb13u1,libs,565,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: device mounting library
+libmpc3,1.3.1-1+b3,libs,154,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: multiple precision complex floating-point library
+libmpfr6,4.2.2-1,libs,1225,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: multiple precision floating-point computation
+libncursesw6,6.5+20250216-2,libs,419,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: shared libraries for terminal handling (wide character suppo
+libnettle8t64,3.10.1-1,libs,560,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: low level cryptographic library (symmetric and one-way crypt
+libnppc12,12.2.5.30~12.4.1-2,non-free/libs,1701,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives core runtime library
+libnppial12,12.2.5.30~12.4.1-2,non-free/libs,17502,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives lib for Image Arithmetic and L
+libnppicc12,12.2.5.30~12.4.1-2,non-free/libs,7515,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives lib for Image Color Conversion
+libnppidei12,12.2.5.30~12.4.1-2,non-free/libs,11140,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives lib for Image Data Exchange an
+libnppif12,12.2.5.30~12.4.1-2,non-free/libs,99034,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives lib for Image Filters
+libnppig12,12.2.5.30~12.4.1-2,non-free/libs,40381,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives lib for Image Geometry transfo
+libnppim12,12.2.5.30~12.4.1-2,non-free/libs,10218,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives lib for Image Morphological op
+libnppist12,12.2.5.30~12.4.1-2,non-free/libs,37234,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives lib for Image Statistics
+libnppisu12,12.2.5.30~12.4.1-2,non-free/libs,797,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives lib for Image Support
+libnppitc12,12.2.5.30~12.4.1-2,non-free/libs,5573,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives lib for Image Threshold and Co
+libnpps12,12.2.5.30~12.4.1-2,non-free/libs,14002,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Performance Primitives for signal processing runtime 
+libnvblas12,12.4.5.8~12.4.1-2,non-free/libs,833,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVBLAS runtime library
+libnvfatbin12,12.4.127~12.4.1-2,non-free/libs,2418,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA compiler library for fatbin interaction
+libnvidia-ml-dev,12.4.127~12.4.1-2,non-free/libdevel,663,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA Management Library (NVML) development files
+libnvidia-ml1,550.163.01-2,non-free/libs,2243,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA Management Library (NVML) runtime library
+libnvidia-pkcs11-openssl3,550.163.01-2,non-free/libs,201,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA PKCS #11 Library (OpenSSL 3)
+libnvidia-ptxjitcompiler1,550.163.01-2,non-free/libs,28197,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA PTX JIT Compiler library
+libnvjitlink12,12.4.127~12.4.1-2,non-free/libs,52434,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Compiler JIT LTO Library
+libnvjpeg12,12.3.1.117~12.4.1-2,non-free/libs,6660,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA JPEG library (nvJPEG)
+libnvrtc-builtins12.4,12.4.127~12.4.1-2,non-free/libs,5311,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: CUDA Runtime Compilation (NVIDIA NVRTC Builtins Library)
+libnvrtc12,12.4.127~12.4.1-2,non-free/libs,59086,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: CUDA Runtime Compilation (NVIDIA NVRTC Library)
+libnvtoolsext1,12.4.127~12.4.1-2,non-free/libs,134,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA Tools Extension Library
+libnvvm4,12.4.131~12.4.1-2,non-free/libs,26675,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: NVIDIA NVVM Library
+libpam-modules,1.7.0-5,admin,923,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Pluggable Authentication Modules for PAM
+libpam-modules-bin,1.7.0-5,admin,206,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Pluggable Authentication Modules for PAM - helper binaries
+libpam-runtime,1.7.0-5,admin,1028,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Runtime support for the PAM library
+libpam0g,1.7.0-5,libs,194,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Pluggable Authentication Modules library
+libpci3,1:3.13.0-2,libs,143,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: PCI utilities (shared library)
+libpcre2-8-0,10.46-1~deb13u2,libs,774,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: New Perl Compatible Regular Expression Library- 8 bit runtim
+libperl5.40,5.40.1-6+deb13u1,libs,29322,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: shared Perl library
+libproc2-0,2:4.0.4-9,libs,237,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: library for accessing process information from /proc
+libquadmath0,14.2.0-19,libs,296,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GCC Quad-Precision Math Library
+libseccomp2,2.6.0-2,libs,201,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: high level interface to Linux seccomp filter
+libselinux1,3.8.1-1,libs,229,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: SELinux runtime shared libraries
+libsemanage-common,3.8.1-1,libs,21,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Common files for SELinux policy management libraries
+libsemanage2,3.8.1-1,libs,313,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: SELinux policy management library
+libsepol2,3.8.1-1,libs,835,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: SELinux library for manipulating binary security policies
+libsframe1,2.44-3,devel,110,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Library to handle the SFrame format (runtime library)
+libsmartcols1,2.41.5-0+deb13u1,libs,377,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: smart column output alignment library
+libsqlite3-0,3.46.1-7+deb13u2,libs,1834,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: SQLite 3 shared library
+libssl3t64,3.5.7-1~deb13u2,libs,8103,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Secure Sockets Layer toolkit - shared libraries
+libstdc++-13-dev,13.3.0-16,libdevel,23860,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU Standard C++ Library v3 (development files)
+libstdc++-14-dev,14.2.0-19,libdevel,22065,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU Standard C++ Library v3 (development files)
+libstdc++6,14.2.0-19,libs,3019,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU Standard C++ Library v3
+libsystemd-shared,257.13-1~deb13u1,libs,6825,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: systemd shared private library"
+libsystemd0,257.13-1~deb13u1,libs,1223,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: systemd utility library"
+libthrust-dev,2.3.2-2,libdevel,5403,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Thrust - Parallel Algorithms Library
+libtinfo6,6.5+20250216-2,libs,569,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: shared low-level terminfo library for terminal handling
+libtirpc-common,1.3.6+ds-1,libs,32,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: transport-independent RPC library - common files
+libtirpc3t64,1.3.6+ds-1,libs,236,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: transport-independent RPC library
+libtsan2,14.2.0-19,libs,8807,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: ThreadSanitizer -- a Valgrind-based detector of data races (
+libubsan1,14.2.0-19,libs,3319,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: UBSan -- undefined behaviour sanitizer (runtime)
+libudev1,257.13-1~deb13u1,libs,357,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: libudev shared library"
+libuuid1,2.41.5-0+deb13u1,libs,98,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Universally Unique ID library
+libxtables12,1.8.11-2,libs,101,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: netfilter xtables library
+libxxhash0,0.8.3-2,libs,92,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: shared library for xxhash
+libzstd1,1.5.7+dfsg-1,libs,847,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: fast lossless compression algorithm
+linux-base,4.12.1,kernel,76,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Linux image base package
+linux-headers-6.12.107+deb13-amd64,6.12.107-1,kernel,10202,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: Header files for Linux 6.12.107+deb13-amd64
+linux-headers-6.12.107+deb13-common,6.12.107-1,kernel,61326,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: Common header files for Linux 6.12.107+deb13
+linux-headers-6.12.117+deb13-amd64,6.12.117-1,kernel,10373,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: Header files for Linux 6.12.117+deb13-amd64
+linux-headers-6.12.117+deb13-common,6.12.117-1,kernel,61566,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: Common header files for Linux 6.12.117+deb13
+linux-headers-amd64,6.12.117-1,kernel,13,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: Header files for Linux amd64 configuration (meta-package)
+linux-image-6.12.107+deb13-amd64,6.12.107-1,kernel,108326,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: Linux 6.12 for 64-bit PCs (signed)
+linux-image-6.12.117+deb13-amd64,6.12.117-1,kernel,108901,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: Linux 6.12 for 64-bit PCs (signed)
+linux-image-amd64,6.12.117-1,kernel,13,GPL-2.0,Open Source (GPL-2.0),Kernel & Core Subsystem: Linux for 64-bit PCs (meta-package)
+linux-kbuild-6.12.107+deb13,6.12.107-1,kernel,3094,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Kbuild infrastructure for Linux 6.12.107+deb13
+linux-kbuild-6.12.117+deb13,6.12.117-1,kernel,3256,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Kbuild infrastructure for Linux 6.12.117+deb13
+linux-libc-dev,6.12.117-1,devel,11138,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Linux support headers for userspace development
+live-boot,1:20250815~deb13u1,misc,124,GPL-2.0,Open Source (GPL-2.0),Live Media & OverlayFS Subsystem: Live System Boot Components
+live-boot-initramfs-tools,1:20250815~deb13u1,misc,25,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: Live System Boot Components (initramfs-tools backend)"
+login,1:4.16.0-2+really2.41.5-0+deb13u1,admin,287,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: system login tools
+login.defs,1:4.17.4-2,admin,214,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: system user management configuration
+logsave,1.47.2-3+b12,admin,59,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: save the output of a command in a log file
+make,4.4.1-2,devel,1766,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: utility for directing compilation
+mawk,1.3.4.20250131-1,interpreters,292,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Pattern scanning and text processing language
+mount,2.41.5-0+deb13u1,admin,497,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: tools for mounting and manipulating filesystems
+nano,8.4-1+deb13u1,editors,2839,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),"Essential Minimal Base Userland: small, friendly text editor inspired by Pico"
+ncurses-base,6.5+20250216-2,misc,389,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: basic terminal type definitions
+ncurses-bin,6.5+20250216-2,utils,665,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: terminal-related programs and man pages
+nvidia-alternative,550.163.01-2,non-free/libs,212,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: allows the selection of NVIDIA as GLX provider
+nvidia-cuda-dev,12.4.127~12.4.1-2,non-free/libdevel,2536971,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA CUDA development files
+nvidia-cuda-toolkit,12.4.131~12.4.1-2,non-free/devel,200253,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA CUDA development toolkit
+nvidia-installer-cleanup,20240109+1,contrib/misc,49,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: cleanup after driver installation with the nvidia-installer
+nvidia-kernel-common,20240109+1,contrib/kernel,26,NVIDIA EULA / MIT-GPL dual,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA binary kernel module support files
+nvidia-kernel-dkms,550.163.01-2,non-free/kernel,71212,NVIDIA EULA / MIT-GPL dual,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA binary kernel module DKMS source
+nvidia-kernel-support,550.163.01-2,non-free/kernel,198,NVIDIA EULA / MIT-GPL dual,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA binary kernel module support files
+nvidia-legacy-check,550.163.01-2,non-free/libs,205,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: check for NVIDIA GPUs requiring a legacy driver
+nvidia-modprobe,570.133.07-1,contrib/utils,66,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: utility to load NVIDIA kernel modules and create device node
+nvidia-opencl-dev,12.4.127~12.4.1-2,non-free/libdevel,83,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA OpenCL development files
+nvidia-profiler,12.4.127~12.4.1-2,non-free/devel,5977,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA Profiler for CUDA and OpenCL
+nvidia-smi,550.163.01-2,non-free/utils,1260,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA System Management Interface
+nvidia-support,20240109+1,contrib/misc,52,NVIDIA EULA,Proprietary / NVIDIA EULA,GPU Computing / Driver Stack: NVIDIA binary graphics driver support files
+ocl-icd-libopencl1,2.3.3-1,libs,161,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Generic OpenCL ICD Loader
+ocl-icd-opencl-dev,2.3.3-1,libdevel,21,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: OpenCL development files
+opencl-c-headers,3.0~2024.10.24-2,libdevel,421,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: OpenCL (Open Computing Language) C header files
+opencl-clhpp-headers,3.0~2024.10.24-2,libdevel,433,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: C++ headers for OpenCL development
+openssl,3.5.7-1~deb13u2,utils,2510,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Secure Sockets Layer toolkit - cryptographic utility
+openssl-provider-legacy,3.5.7-1~deb13u2,utils,424,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Secure Sockets Layer toolkit - cryptographic utility
+pahole,1.30-1,utils,1587,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: set of advanced DWARF utilities
+passwd,1:4.17.4-2,admin,4758,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: change and administer password and group data
+patch,2.8-2,vcs,242,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Apply a diff file to an original
+pci.ids,0.0~2025.06.09-1,admin,1509,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: PCI ID Repository
+pciutils,1:3.13.0-2,admin,266,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: PCI utilities
+perl,5.40.1-6+deb13u1,perl,841,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Larry Wall's Practical Extraction and Report Language
+perl-base,5.40.1-6+deb13u1,perl,7815,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: minimal Perl system
+perl-modules-5.40,5.40.1-6+deb13u1,libs,19993,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Core Perl modules
+procps,2:4.0.4-9,admin,2395,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: /proc file system utilities
+rpcsvc-proto,1.4.3-1,libs,246,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: RPC protocol compiler and definitions
+sed,4.9-2+deb13u1,utils,991,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU stream editor for filtering/transforming text
+sqv,1.3.0-3+b2,utils,1855,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: OpenPGP signature verification program from Sequoia
+sudo,1.9.16p2-3+deb13u2,admin,6705,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: Provide limited super user privileges to specific users
+systemd,257.13-1~deb13u1,admin,9944,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: system and service manager"
+systemd-sysv,257.13-1~deb13u1,admin,97,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: system and service manager - SysV compatibility symlinks"
+sysvinit-utils,3.14-4,admin,104,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: System-V-like utilities"
+tar,1.35+dfsg-3.1,utils,3085,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: GNU version of the tar archiving utility
+tzdata,2026c-0+deb13u1,localization,1358,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: time zone and daylight-saving time data
+udev,257.13-1~deb13u1,admin,10236,LGPL-2.1+,Open Source (LGPL-2.1+),"Init, Device Management & System Bus: /dev/ and hotplug management daemon"
+update-glx,1.2.2,contrib/x11,28,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: utility for switching the GLX implementation
+util-linux,2.41.5-0+deb13u1,utils,4986,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: miscellaneous system utilities
+xz-utils,5.8.1-1+deb13u2,utils,1424,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: XZ-format compression utilities
+zlib1g,1:1.3.dfsg+really1.3.1-1+b1,libs,173,GPL / LGPL / Permissive,Open Source (GPL / LGPL / BSD),Essential Minimal Base Userland: compression library - runtime

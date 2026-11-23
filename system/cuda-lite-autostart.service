@@ -1,15 +1,16 @@
 [Unit]
-Description=CUDA-Lite Linux Autonomous GPU Diagnostic and Benchmark Service
-After=network.target local-fs.target
+Description=CUDA-Lite Linux GPU Diagnostic and Benchmark
+After=local-fs.target systemd-udev-settle.service
 Wants=systemd-udev-settle.service
+ConditionPathIsExecutable=/usr/local/sbin/cuda-lite-startup
 
 [Service]
 Type=oneshot
 User=root
+ExecStart=/bin/bash /usr/local/sbin/cuda-lite-startup
 StandardOutput=journal+console
 StandardError=journal+console
-ExecStartPre=/usr/bin/nvidia-smi
-ExecStart=/opt/cuda-lite/bin/matrix_mul 1024 5
+TimeoutStartSec=300
 RemainAfterExit=yes
 
 [Install]

@@ -1,0 +1,8 @@
+# CUDA-Lite Linux: Hardened NVIDIA Device Node Permissions
+# Restricts GPU device node access to members of the video/render groups (0660)
+# Replaces insecure world-writable (0666) access with group-restricted privilege separation.
+
+KERNEL=="nvidia*", GROUP="video", MODE="0660"
+KERNEL=="nvidiactl", GROUP="video", MODE="0660"
+KERNEL=="nvidia-uvm*", GROUP="video", MODE="0660"
+KERNEL=="nvidia-modeset*", GROUP="video", MODE="0660"

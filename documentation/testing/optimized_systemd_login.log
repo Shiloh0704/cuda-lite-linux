@@ -1,0 +1,51 @@
+>>> TEST 1: Boot Default Kernel (6.12.117) to systemd Login Prompt <<<
+SeaBIOS (version 1.17.0-debian-1.17.0-1ubuntu1)
+
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+7EFC8AD0+7EF08AD0 CA00
+
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...
+                                                                               
+
+
+
+Booting from ROM...
+
+/init: line 29: can't create /root/etc/network/interfaces: nonexistent directory
+
+[    5.583423] systemd-fstab-generator[328]: Failed to create unit file '/run/systemd/generator/tmp.mount', as it already exists. Duplicate entry in '/etc/fstab'?
+
+[    5.596774] (sd-exec-[326]: /usr/lib/systemd/system-generators/systemd-fstab-generator failed with exit status 1.
+
+[   14.076934] bash[519]: ================================================
+
+[   14.085204] bash[519]:        CUDA-Lite Linux - Startup Diagnostic
+
+[   14.088841] bash[519]: ================================================
+
+[FAILED] Failed to start nvidia-cdi-refresh…resh NVIDIA CDI specification file.
+
+
+[   14.159901] bash[519]: Notice: No NVIDIA PCI device detected on the bus (virtual/QEMU environment).
+
+[   14.165880] bash[519]: CUDA diagnostic benchmark skipped.
+
+[FAILED] Failed to start nvidia-cdi-refresh…resh NVIDIA CDI specification file.
+
+
+[FAILED] Failed to start nvidia-cdi-refresh…resh NVIDIA CDI specification file.
+
+
+[FAILED] Failed to start nvidia-cdi-refresh…resh NVIDIA CDI specification file.
+
+
+
+
+
+Debian GNU/Linux 13 cuda-lite ttyS0
+
+
+
+cuda-lite login: 
+[PASS] Default Kernel reached systemd login prompt in 21.85s!

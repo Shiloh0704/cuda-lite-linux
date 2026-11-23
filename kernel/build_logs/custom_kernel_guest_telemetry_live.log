@@ -1,0 +1,50 @@
+c[?7l[2J[0mSeaBIOS (version 1.17.0-debian-1.17.0-1ubuntu1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+7EFC8AD0+7EF08AD0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from ROM...
+c[?7l[2J/init: line 29: can't create /root/etc/network/interfaces: nonexistent directory
+/bin/sh:
+[SUCCESS] Direct root shell obtained!
+uname -a
+cat /etc/os-release
+lsmod
+mount
+echo TELEMETRY_COMPLETE
+ 0: can't access tty; job control turned off
+# uname -a
+cat /etc/os-release
+lsmod
+Linux (none) 6.12.0-cuda-lite #2 SMP PREEMPT_DYNAMIC Sun Nov 22 12:18:08 UTC 2026 x86_64 GNU/Linux
+# mount
+echo TELEMETRY_COMPLETE
+
+[SUCCESS] Completed telemetry collection!
+poweroff -f || reboot -f
+poweroff -f || reboot -f
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.7
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+# Module                  Size  Used by
+# sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=988952k,nr_inodes=247238,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=600,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=202584k,mode=755,inode64)
+/dev/sr0 on /run/live/medium type iso9660 (ro,noatime,nojoliet,check=s,map=n,blocksize=2048,iocharset=utf8)
+/dev/loop0 on /run/live/rootfs/filesystem.squashfs type squashfs (ro,noatime,errors=continue)
+tmpfs on /run/live/overlay type tmpfs (rw,noatime,size=1012904k,mode=755,inode64)
+overlay on / type overlay (rw,noatime,lowerdir=/run/live/rootfs/filesystem.squashfs/,upperdir=/run/live/overlay/rw,workdir=/run/live/overlay/work,redirect_dir=on,uuid=on)
+# TELEMETRY_COMPLETE
+# Powering off.
+[    7.155791] reboot: Power down

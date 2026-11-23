@@ -1,9 +1,15 @@
-# CUDA-Lite Linux: Minimal Package Manifest
-# Target Distribution: Debian 13 (Trixie) / Ubuntu minimal base (amd64)
-# Track C: CUDA/GPU Compute Application-Specific Linux
-# Total Packages: ~142 packages (versus 1,100+ in stock Debian/Ubuntu desktop)
 
-# --- Category 1: Minimal Base System & Init ---
+# =============================================================================
+# CUDA-Lite Linux - Package Manifest
+# Target: Debian 13 Trixie
+# Architecture: AMD64
+# Purpose: Lightweight NVIDIA CUDA computing distribution
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# CATEGORY 1: Minimal Base System
+# -----------------------------------------------------------------------------
+
 base-files
 base-passwd
 bash
@@ -23,51 +29,74 @@ libstdc++6
 login
 mount
 sed
-systemd
-systemd-sysv
 tar
 util-linux
+ca-certificates
+sudo
 
-# --- Category 2: Hardware, Storage & Filesystem Drivers ---
-kmod
-udev
-libudev1
-pciutils
-e2fsprogs
-dosfstools
-squashfs-tools
-overlayfs-tools
+# -----------------------------------------------------------------------------
+# CATEGORY 2: Kernel and Live Boot
+# -----------------------------------------------------------------------------
 
-# --- Category 3: Bootloader & Kernel Image ---
 linux-image-amd64
+linux-headers-amd64
 live-boot
 live-boot-initramfs-tools
 initramfs-tools
-busybox
-grub-efi-amd64-bin
-grub-pc-bin
+systemd
+systemd-sysv
+udev
+kmod
+pciutils
 
-# --- Category 4: Minimal Networking & Remote Operations ---
-iproute2
-iputils-ping
-isc-dhcp-client
-openssh-server
-ca-certificates
-netbase
+# -----------------------------------------------------------------------------
+# CATEGORY 3: NVIDIA Kernel Driver and Firmware
+# -----------------------------------------------------------------------------
 
-# --- Category 5: NVIDIA Compute & CUDA Runtime ---
-nvidia-driver-libs-nvcuda
+dkms
+build-essential
+firmware-nvidia-gsp
+nvidia-kernel-dkms
+nvidia-smi
+libcuda1
+
+# -----------------------------------------------------------------------------
+# CATEGORY 4: CUDA Toolkit and Libraries
+# -----------------------------------------------------------------------------
+
 nvidia-cuda-toolkit
 nvidia-cuda-dev
-nvidia-smi
-nvidia-modprobe
-libcuda1
 libcudart12
 libcublas12
-libcurand12
+libcurand10
 
-# --- Category 6: Performance Monitoring & Diagnostic ---
-htop
+# Additional CUDA libraries are installed through package dependencies.
+
+# -----------------------------------------------------------------------------
+# CATEGORY 5: Networking and System Utilities
+# -----------------------------------------------------------------------------
+
+iproute2
+isc-dhcp-client
 procps
 less
 nano
+
+# -----------------------------------------------------------------------------
+# BUILD HOST TOOLS
+# These are installed on the Ubuntu build environment, not the ISO rootfs.
+# -----------------------------------------------------------------------------
+
+debootstrap
+grub-mkrescue
+xorriso
+squashfs-tools
+qemu-system-x86
+
+# -----------------------------------------------------------------------------
+# NOTES
+# -----------------------------------------------------------------------------
+# This manifest describes the principal packages used by the project.
+# Debian automatically installs transitive dependencies.
+# The build script explicitly installs the target packages.
+# The build host tools are separate from the target Linux distribution.

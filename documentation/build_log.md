@@ -53,3 +53,17 @@
 7. **Phase 7: Hardening & Services**:
    - Automated systemd service execution on boot.
    - Injected four justified sysctl kernel hardening parameters.
+
+8. **Phase 8: Environment Memory Tuning & Automated Telemetry**:
+   - Tuned WSL2 virtual machine memory to 10.0 GB RAM and 6.0 GB swap to prevent OOM termination during DKMS compilation.
+   - Hardened `benchmarks/run_benchmarks.sh` CSV telemetry parser and confirmed 100% numerical verification ($1.91 \times 10^{-5}$ deviation at $N=1024$) on physical RTX 4050 hardware.
+   - Verified kernel header parity between debootstrap base and trixie-security updates in `/usr/src`.
+
+9. **Phase 9: Successful Build 4 Resumption & ISO Generation**:
+   - Resumed Build 4 via non-destructive resume mechanism, reusing existing debootstrap rootfs and cached packages.
+   - Built and signed `nvidia-current/550.163.01` kernel modules for both `6.12.107+deb13-amd64` and `6.12.117+deb13-amd64`.
+   - Updated initramfs with `live-boot` integration and NVIDIA GSP firmware.
+   - Compressed rootfs into `filesystem.squashfs` (2.68 GiB, XZ compression with x86 BCJ filter, 66,802 inodes).
+   - Generated hybrid BIOS/UEFI bootable ISO `/mnt/d/cuda-lite-linux.iso` (2,878,935,040 bytes) via `grub-mkrescue` and `xorriso`.
+   - SHA-256: `a417a137ba9f16ae22bfe4f8e00d4439dccb67d4ed17fe290329150ead05a3fb`.
+   - Booted in QEMU across both SeaBIOS and TianoCore OVMF UEFI modes; captured serial console boot log confirming live-boot discovery, OverlayFS mounting, systemd PID 1 initialization, and graceful `NVRM: No NVIDIA GPU found.` module logging.

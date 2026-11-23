@@ -1,0 +1,46 @@
+>>> TEST 2: Boot Custom Kernel (6.12.0-cuda-lite) <<<
+SeaBIOS (version 1.17.0-debian-1.17.0-1ubuntu1)
+
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+7EFC8AD0+7EF08AD0 CA00
+
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...
+                                                                               
+
+
+
+Booting from ROM...
+
+/init: line 29: can't create /root/etc/network/interfaces: nonexistent directory
+
+[    4.161295] systemd[1]: Failed to find module 'autofs4'
+
+[    4.550190] systemd[1]: bpf-restrict-fs: Failed to load BPF object: No such process
+
+[    4.631814] systemd-fstab-generator[316]: Failed to create unit file '/run/systemd/generator/tmp.mount', as it already exists. Duplicate entry in '/etc/fstab'?
+
+[    4.648201] (sd-exec-[314]: /usr/lib/systemd/system-generators/systemd-fstab-generator failed with exit status 1.
+
+[UNSUPP] Starting of proc-sys-fs-binfmt_mis…System Automount Point unsupported.
+
+
+[   12.111289] bash[416]: ================================================
+
+[   12.124838] bash[416]:        CUDA-Lite Linux - Startup Diagnostic
+
+[   12.138164] bash[416]: ================================================
+
+[   12.266679] bash[416]: Notice: No NVIDIA PCI device detected on the bus (virtual/QEMU environment).
+
+[   12.273084] bash[416]: CUDA diagnostic benchmark skipped.
+
+
+
+
+Debian GNU/Linux 13 cuda-lite ttyS0
+
+
+
+cuda-lite login: 
+[PASS] Custom Kernel boot succeeded in 20.03s (matched pattern index 0)!

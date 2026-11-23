@@ -1,0 +1,3 @@
+# Dynamic hardware-aware module loading for NVIDIA GPUs
+# Only load driver when an NVIDIA display or 3D controller PCI device is detected
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x03*", RUN+="/sbin/modprobe nvidia", RUN+="/sbin/modprobe nvidia-uvm", RUN+="/sbin/modprobe nvidia-modeset", RUN+="/sbin/modprobe nvidia-drm"

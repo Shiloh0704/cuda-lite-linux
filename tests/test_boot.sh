@@ -25,20 +25,44 @@ echo "RAM Allocated: 2048 MB, Cores: 2"
 echo "Press Ctrl+A then X to exit QEMU if running in nographic mode."
 echo "====================================================================="
 
-# Boot QEMU with 2 GB RAM, 2 CPU cores, KVM acceleration if supported
-ACCEL="-enable-kvm"
-if [ ! -e /dev/kvm ]; then
-    ACCEL=""
-    echo "Notice: KVM hardware acceleration not available inside current nested layer. Using standard TCG emulation."
+# Boot QEMU with 2048 MB RAM, 2 vCPUs, KVM if genuinely accessible, otherwise modern TCG
+ACCEL_OPTS=""
+ACCEL_DESC=""
+if [ -e /dev/kvm ] && [ -r /dev/kvm ] && [ -w /dev/kvm ]; then
+    ACCEL_OPTS="-enable-kvm -cpu host"
+    ACCEL_DESC="KVM (Hardware Accelerated, CPU: host)"
+else
+    # Use modern 64-bit compatible CPU model supported by QEMU TCG
+    ACCEL_OPTS="-accel tcg -cpu max"
+    ACCEL_DESC="TCG (Software Emulation, CPU: max)"
 fi
 
-qemu-system-x86_64 \
-    $ACCEL \
+echo "Acceleration Mode: $ACCEL_DESC"
+
+# Configure graphical display if X11 or Wayland display environment is available
+DISPLAY_OPTS="-display none"
+if [ -n "${DISPLAY:-}" ] || [ -n "${WAYLAND_DISPLAY:-}" ]; then
+    DISPLAY_OPTS="-display gtk -vga std"
+    echo "Display Backend: GTK (graphical window enabled via WSLg/X11)"
+else
+    echo "Display Backend: none (headless fallback, serial console active)"
+fi
+
+# Launch QEMU with 2 vCPUs, 2048 MB RAM, modern CPU, and legacy hardware disabled:
+# - Floppy drive disabled via isa-fdc.fdtypeA=none
+# - Parallel port disabled via -parallel none
+# - PC speaker / audio disabled via -audiodev none
+exec qemu-system-x86_64 \
+    $ACCEL_OPTS \
     -m 2048 \
     -smp 2 \
+    -machine pc \
     -cdrom "$ISO_PATH" \
     -boot d \
-    -display none \
+    $DISPLAY_OPTS \
     -serial mon:stdio \
+    -global isa-fdc.fdtypeA=none \
+    -parallel none \
+    -audiodev none,id=snd0 \
     -device virtio-net-pci \
     -no-reboot

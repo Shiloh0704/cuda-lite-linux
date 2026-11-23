@@ -19,7 +19,7 @@
                          ioctl / DMA / Unified Memory
                                      ▼
 +-------------------------------------------------------------------------+
-|                   Kernel Modules (nvidia-open / GPLv2)                  |
+|             Kernel Modules (nvidia-kernel-dkms / nvidia-open)           |
 |  - nvidia.ko (Hardware Interface & PCIe Bar Management)                 |
 |  - nvidia-uvm.ko (Unified Virtual Memory & Page Fault Migration)        |
 |  - nvidia-modeset.ko (Display context management)                       |

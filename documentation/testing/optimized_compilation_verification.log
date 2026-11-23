@@ -1,0 +1,16 @@
+=== CHROOT COMPILATION VERIFICATION EVIDENCE ===
+
+1. C & cuDNN Linking Test:
+Program: /tmp/test_compile.c
+Command: gcc -I/usr/include/x86_64-linux-gnu /tmp/test_compile.c -lcudart -lcudnn -o /tmp/test_compile && /tmp/test_compile
+Output:
+CUDA Runtime & cuDNN header include test: SUCCESS
+cuDNN Version: 90000
+Compilation and execution verification: PASSED
+
+2. Host and Device Kernel NVCC Compilation Test:
+Program: /tmp/test_nvcc.cu
+Command: nvcc -O2 /tmp/test_nvcc.cu -o /tmp/test_nvcc && /tmp/test_nvcc
+Output:
+NVCC Host/Device compilation test: SUCCESS
+NVCC verification: PASSED

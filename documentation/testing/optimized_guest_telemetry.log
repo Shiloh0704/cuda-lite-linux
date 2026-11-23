@@ -1,0 +1,258 @@
+>>> TEST 3: Guest Functionality & Telemetry Verification <<<
+SeaBIOS (version 1.17.0-debian-1.17.0-1ubuntu1)
+
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+7EFC8AD0+7EF08AD0 CA00
+
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...
+                                                                               
+
+
+
+Booting from ROM...
+
+/bin/sh:
+[PASS] Direct root shell established inside guest!
+echo '=== GUEST_OS_RELEASE ===' && cat /etc/os-release
+echo '=== GUEST_UNAME ===' && uname -a
+echo '=== GUEST_MOUNTS ===' && mount | grep -E 'overlay|live|iso'
+echo '=== GUEST_DISK_USAGE ===' && df -h / /run/live/medium
+echo '=== GUEST_MEMORY ===' && free -m
+echo '=== GUEST_OVERLAY_TEST ===' && touch /tmp/overlay_write_test && ls -l /tmp/overlay_write_test && echo 'OVERLAYFS_WRITABLE_VERIFIED'
+echo '=== GUEST_CUDA_FILES ===' && which nvcc && nvcc --version && ls -lh /usr/lib/x86_64-linux-gnu/libcuda*.so*
+echo '=== GUEST_CUDNN_FILES ===' && ls -lh /usr/lib/x86_64-linux-gnu/libcudnn*.so* | head -n 6 && ls -lh /usr/include/x86_64-linux-gnu/cudnn*.h | head -n 6
+echo '=== GUEST_CONTAINER_FILES ===' && which docker dockerd containerd runc nvidia-ctk && docker --version && containerd --version && runc --version && nvidia-ctk --version
+echo '=== GUEST_SYSTEMD_SERVICES ===' && ls -la /etc/systemd/system/multi-user.target.wants/ || true
+echo '=== GUEST_BOOT_FILES ===' && ls -lh /boot/
+echo '=== GUEST_DKMS_MODULES ===' && ls -lh /usr/lib/modules/6.12.117+deb13-amd64/updates/dkms/
+echo '=== ALL_GUEST_TESTS_COMPLETED ==='
+poweroff -f || reboot -f
+ 0: can't access tty; job control turned off
+
+# echo '=== GUEST_OS_RELEASE ===' && cat /etc/os-release
+
+=== GUEST_OS_RELEASE ===
+
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+
+NAME="Debian GNU/Linux"
+
+VERSION_ID="13"
+
+VERSION="13 (trixie)"
+
+VERSION_CODENAME=trixie
+
+DEBIAN_VERSION_FULL=13.7
+
+ID=debian
+
+HOME_URL="https://www.debian.org/"
+
+SUPPORT_URL="https://www.debian.org/support"
+
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+# echo '=== GUEST_UNAME ===' && uname -a
+
+=== GUEST_UNAME ===
+
+Linux (none) 6.12.117+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.117-1 (2026-11-12) x86_64 GNU/Linux
+
+# echo '=== GUEST_MOUNTS ===' && mount | grep -E 'overlay|live|iso'
+
+=== GUEST_MOUNTS ===
+
+/dev/sr0 on /run/live/medium type iso9660 (ro,noatime,nojoliet,check=s,map=n,blocksize=2048,iocharset=utf8)
+
+/dev/loop0 on /run/live/rootfs/filesystem.squashfs type squashfs (ro,noatime,errors=continue)
+
+tmpfs on /run/live/overlay type tmpfs (rw,noatime,mode=755,inode64)
+
+overlay on / type overlay (rw,noatime,lowerdir=/run/live/rootfs/filesystem.squashfs/,upperdir=/run/live/overlay/rw,workdir=/run/live/overlay/work,redirect_dir=on,uuid=on)
+
+# echo '=== GUEST_DISK_USAGE ===' && df -h / /run/live/medium
+
+=== GUEST_DISK_USAGE ===
+
+Filesystem      Size  Used Avail Use% Mounted on
+
+overlay         987M  8.0K  987M   1% /
+
+/dev/sr0        2.1G  2.1G     0 100% /run/live/medium
+
+# echo '=== GUEST_MEMORY ===' && free -m
+
+=== GUEST_MEMORY ===
+
+               total        used        free      shared  buff/cache   available
+
+Mem:            1973         159        1874           0          25        1813
+
+Swap:              0           0           0
+
+# echo '=== GUEST_OVERLAY_TEST ===' && touch /tmp/overlay_write_test && ls -l /tmp/overlay_write_test && echo 'OVERLAYFS_WRITABLE_VERIFIED'
+
+=== GUEST_OVERLAY_TEST ===
+
+-rw-r--r-- 1 root root 0 Nov 22 18:24 /tmp/overlay_write_test
+
+OVERLAYFS_WRITABLE_VERIFIED
+
+# echo '=== GUEST_CUDA_FILES ===' && which nvcc && nvcc --version && ls -lh /usr/lib/x86_64-linux-gnu/libcuda*.so*
+
+=== GUEST_CUDA_FILES ===
+
+/bin/nvcc
+
+echo '=== GUEST_CUDNN_FILES ===' && ls -lh /usr/lib/x86_64-linux-gnu/libcudnn*.so* | head -n 6 && ls -lh /usr/include/x86_64-linux-gnu/cudnn*.h | head -n 6
+
+nvcc: NVIDIA (R) Cuda compiler driver
+
+Copyright (c) 2005-2024 NVIDIA Corporation
+
+Built on Thu_Mar_28_02:18:24_PDT_2024
+
+Cuda compilation tools, release 12.4, V12.4.131
+
+Build cuda_12.4.r12.4/compiler.34097967_0
+
+lrwxrwxrwx 1 root root   53 Jul 21  2025 /usr/lib/x86_64-linux-gnu/libcuda.so -> /etc/alternatives/nvidia--libcuda.so-x86_64-linux-gnu
+
+lrwxrwxrwx 1 root root   55 Jul 21  2025 /usr/lib/x86_64-linux-gnu/libcuda.so.1 -> /etc/alternatives/nvidia--libcuda.so.1-x86_64-linux-gnu
+
+lrwxrwxrwx 1 root root   15 Jul 21  2025 /usr/lib/x86_64-linux-gnu/libcudart.so -> libcudart.so.12
+
+lrwxrwxrwx 1 root root   21 Jul 21  2025 /usr/lib/x86_64-linux-gnu/libcudart.so.12 -> libcudart.so.12.4.127
+
+-rw-r--r-- 1 root root 692K Mar 28  2024 /usr/lib/x86_64-linux-gnu/libcudart.so.12.4.127
+
+# === GUEST_CUDNN_FILES ===
+
+lrwxrwxrwx 1 root root   13 Nov 22 12:53 /usr/lib/x86_64-linux-gnu/libcudnn.so -> libcudnn.so.9
+
+lrwxrwxrwx 1 root root   17 Nov 22 12:53 /usr/lib/x86_64-linux-gnu/libcudnn.so.9 -> libcudnn.so.9.0.0
+
+-rw-r--r-- 1 root root 103K Nov 22 12:53 /usr/lib/x86_64-linux-gnu/libcudnn.so.9.0.0
+
+lrwxrwxrwx 1 root root   17 Nov 22 12:53 /usr/lib/x86_64-linux-gnu/libcudnn_adv.so -> libcudnn_adv.so.9
+
+lrwxrwxrwx 1 root root   21 Nov 22 12:53 /usr/lib/x86_64-linux-gnu/libcudnn_adv.so.9 -> libcudnn_adv.so.9.0.0
+
+-rw-r--r-- 1 root root 229M Nov 22 12:53 /usr/lib/x86_64-linux-gnu/libcudnn_adv.so.9.0.0
+
+-rw-r--r-- 1 root root 2.8K Nov 22 12:53 /usr/include/x86_64-linux-gnu/cudnn.h
+
+-rw-r--r-- 1 root root  31K Nov 22 12:53 /usr/include/x86_64-linux-gnu/cudnn_adv.h
+
+-rw-r--r-- 1 root root  31K Nov 22 12:53 /usr/include/x86_64-linux-gnu/cudnn_adv_v9.h
+
+-rw-r--r-- 1 root root 2.7K Nov 22 12:53 /usr/include/x86_64-linux-gnu/cudnn_backend.h
+
+-rw-r--r-- 1 root root 2.7K Nov 22 12:53 /usr/include/x86_64-linux-gnu/cudnn_backend_v9.h
+
+-rw-r--r-- 1 root root  36K Nov 22 12:53 /usr/include/x86_64-linux-gnu/cudnn_cnn.h
+
+# echo '=== GUEST_CONTAINER_FILES ===' && which docker dockerd containerd runc nvidia-ctk && docker --version && containerd --version && runc --version && nvidia-ctk --version
+
+=== GUEST_CONTAINER_FILES ===
+
+/bin/docker
+
+/sbin/dockerd
+
+/bin/containerd
+
+/sbin/runc
+
+/bin/nvidia-ctk
+
+echo '=== GUEST_SYSTEMD_SERVICES ===' && ls -la /etc/systemd/system/multi-user.target.wants/ || true
+
+echo '=== GUEST_BOOT_FILES ===' && ls -lh /boot/
+
+echo '=== GUEST_DKMS_MODULES ===' && ls -lh /usr/lib/modules/6.12.117+deb13-amd64/updates/dkms/
+
+echo '=== ALL_GUEST_TESTS_COMPLETED ==='
+
+Docker version 26.1.5+dfsg1, build a72d7cd
+
+poweroff -f || reboot -f
+
+
+[PASS] All in-guest functionality tests completed successfully!
+containerd github.com/containerd/containerd 1.7.24~ds1 1.7.24~ds1-6+deb13u1
+
+runc version 1.1.15+ds1
+
+commit: 1.1.15+ds1-2+b4
+
+spec: 1.2.0
+
+go: go1.24.4
+
+libseccomp: 2.6.0
+
+NVIDIA Container Toolkit CLI version 1.20.2
+
+commit: adbd28c39b60f8eb7e03115b5ac61e58703f0ce7
+
+# === GUEST_SYSTEMD_SERVICES ===
+
+total 0
+
+drwxr-xr-x 2 root root 187 Nov 22 12:57 .
+
+drwxr-xr-x 7 root root 190 Nov 22 12:56 ..
+
+lrwxrwxrwx 1 root root  42 Nov 22 12:56 containerd.service -> /usr/lib/systemd/system/containerd.service
+
+lrwxrwxrwx 1 root root  47 Nov 20 19:57 cuda-lite-autostart.service -> /etc/systemd/system/cuda-lite-autostart.service
+
+lrwxrwxrwx 1 root root  38 Nov 22 12:56 docker.service -> /usr/lib/systemd/system/docker.service
+
+lrwxrwxrwx 1 root root  47 Nov 22 12:57 nvidia-cdi-refresh.path -> /usr/lib/systemd/system/nvidia-cdi-refresh.path
+
+lrwxrwxrwx 1 root root  50 Nov 22 12:57 nvidia-cdi-refresh.service -> /usr/lib/systemd/system/nvidia-cdi-refresh.service
+
+lrwxrwxrwx 1 root root  40 Nov 20 18:57 remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
+
+# === GUEST_BOOT_FILES ===
+
+total 102M
+
+-rw-r--r-- 1 root root   83 Nov 12 09:30 System.map-6.12.117+deb13-amd64
+
+-rwxr-xr-x 1 root root 276K Nov 22 13:00 config-6.12.0-cuda-lite
+
+-rw-r--r-- 1 root root 277K Nov 12 09:30 config-6.12.117+deb13-amd64
+
+-rwxr-xr-x 1 root root  40M Nov 22 13:00 initrd-6.12.0-cuda-lite
+
+-rw-r--r-- 1 root root  40M Nov 21 18:18 initrd.img-6.12.117+deb13-amd64
+
+-rwxr-xr-x 1 root root  11M Nov 22 13:00 vmlinuz-6.12.0-cuda-lite
+
+-rw-r--r-- 1 root root  12M Nov 12 09:30 vmlinuz-6.12.117+deb13-amd64
+
+# === GUEST_DKMS_MODULES ===
+
+total 41M
+
+-rw-r--r-- 1 root root  64K Nov 20 19:56 nvidia-current-drm.ko.xz
+
+-rw-r--r-- 1 root root 602K Nov 20 19:56 nvidia-current-modeset.ko.xz
+
+-rw-r--r-- 1 root root 2.4K Nov 20 19:56 nvidia-current-peermem.ko.xz
+
+-rw-r--r-- 1 root root 577K Nov 20 19:56 nvidia-current-uvm.ko.xz
+
+-rw-r--r-- 1 root root  40M Nov 20 19:56 nvidia-current.ko.xz
+
+# === ALL_GUEST_TESTS_COMPLETED ===
+
+# Powering off.
+
+
+[   12.498894] reboot: Power down

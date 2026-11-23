@@ -47,9 +47,9 @@ for N in "${SIZES[@]}"; do
     # Extract metrics for CSV summary
     CPU_T=$(echo "$OUT" | grep "CPU Average Time:" | awk '{print $4}' || echo "N/A")
     GPU_T=$(echo "$OUT" | grep "GPU Tiled Time:" | awk '{print $4}' || echo "N/A")
-    H2D_T=$(echo "$OUT" | grep "Host-to-Device" | awk '{print $4}' || echo "N/A")
+    H2D_T=$(echo "$OUT" | grep "Host-to-Device" | awk '{print $6}' || echo "N/A")
     D2H_T=$(echo "$OUT" | grep "Device-to-Host" | awk '{print $4}' || echo "N/A")
-    K_SPEED=$(echo "$OUT" | grep "Raw Kernel Compute Speedup:" | awk '{print $5}' | tr -d 'x' || echo "N/A")
+    K_SPEED=$(echo "$OUT" | grep "Raw Kernel Compute Speedup:" | awk '{print $6}' | tr -d 'x' || echo "N/A")
     E_SPEED=$(echo "$OUT" | grep "End-to-End System Speedup:" | awk '{print $5}' | tr -d 'x' || echo "N/A")
     
     echo "$N,$CPU_T,$GPU_T,$H2D_T,$D2H_T,$K_SPEED,$E_SPEED" >> "$CSV_FILE"
